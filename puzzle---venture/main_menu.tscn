@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://ci05xk6efm1yc"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_ac7hl"]
+[ext_resource type="Texture2D" uid="uid://dye5umdfxxkxj" path="res://MAIN MENU BG.jpg" id="2_k3eut"]
+[ext_resource type="Texture2D" uid="uid://0a0y3y8shu4" path="res://2a082b3a-51b3-457a-bb81-cc9b56528f3c.jpg" id="3_dq7oq"]
+[ext_resource type="Texture2D" uid="uid://mf5st37u0pbk" path="res://4d0cddb4-261d-4b2f-a281-cdd62fef1a71.jpg" id="4_7wqhd"]
+[ext_resource type="Texture2D" uid="uid://cpt5ie0a3urur" path="res://4618efb2-aea6-4b07-ad96-8629ab147ab7.jpg" id="5_fkerf"]
+
+[sub_resource type="SystemFont" id="SystemFont_1hiob"]
+font_names = PackedStringArray("Cursive")
+font_weight = 675
+font_stretch = 125
+
+[sub_resource type="SystemFont" id="SystemFont_jpclq"]
+font_names = PackedStringArray("Comic Sans MS")
+font_weight = 775
+
+[sub_resource type="SystemFont" id="SystemFont_k7cw5"]
+font_names = PackedStringArray("Comic Sans MS")
+font_weight = 999
+
+[node name="MAIN MENU" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ac7hl")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -6.10352e-05
+offset_top = -3.05176e-05
+offset_right = 1152.0
+offset_bottom = 650.0
+
+[node name="4625478845818995776178767130294966757480901N" type="Sprite2D" parent="."]
+position = Vector2(576, 323.25)
+scale = Vector2(0.55957, 0.318115)
+texture = ExtResource("2_k3eut")
+
+[node name="2a082b3a-51b3-457a-bb81-cc9b56528f3c" type="Sprite2D" parent="."]
+position = Vector2(638, 433)
+scale = Vector2(0.198293, 0.131116)
+texture = ExtResource("3_dq7oq")
+
+[node name="4d0Cddb4-261d-4b2f-a281-cdd62Fef1a71" type="Sprite2D" parent="."]
+position = Vector2(637, 507)
+scale = Vector2(0.199077, 0.122912)
+texture = ExtResource("4_7wqhd")
+
+[node name="4618Efb2-aea6-4b07-ad96-8629Ab147Ab7" type="Sprite2D" parent="."]
+position = Vector2(637.313, 577)
+scale = Vector2(0.199723, 0.119928)
+texture = ExtResource("5_fkerf")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 403.0
+offset_right = 775.0
+offset_bottom = 461.0
+theme_override_colors/font_hover_color = Color(0.490196, 0.537255, 0.941176, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = SubResource("SystemFont_1hiob")
+theme_override_font_sizes/font_size = 35
+text = "PLAY!"
+flat = true
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 476.0
+offset_right = 804.0
+offset_bottom = 534.0
+theme_override_colors/font_hover_pressed_color = Color(0.412693, 0.522277, 0.91868, 1)
+theme_override_colors/font_hover_color = Color(0.639216, 0.470588, 0.733333, 1)
+theme_override_fonts/font = SubResource("SystemFont_jpclq")
+theme_override_font_sizes/font_size = 35
+text = "SETTINGS"
+flat = true
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 499.0
+offset_top = 547.0
+offset_right = 777.0
+offset_bottom = 605.0
+theme_override_colors/font_hover_pressed_color = Color(0.968587, 7.77312e-06, 0, 1)
+theme_override_colors/font_hover_color = Color(0.87451, 0, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_k7cw5")
+theme_override_font_sizes/font_size = 35
+action_mode = 0
+text = "EXIT "
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

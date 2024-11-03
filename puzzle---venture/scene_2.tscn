@@ -1,0 +1,94 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccp62k5ee555t"]
+
+[ext_resource type="Texture2D" uid="uid://cv0iv8jqsrq3o" path="res://5a7943e7-36ea-478f-bf4c-6dfd004fcdb3.jpg" id="2_762b5"]
+[ext_resource type="Script" path="res://scene_2.gd" id="2_f00yx"]
+
+[sub_resource type="SystemFont" id="SystemFont_tcjfe"]
+font_names = PackedStringArray("Papyrus")
+font_weight = 999
+font_stretch = 150
+
+[sub_resource type="SystemFont" id="SystemFont_6hbaw"]
+font_names = PackedStringArray("Fantasy")
+
+[node name="MAP" type="Node2D"]
+script = ExtResource("2_f00yx")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 652.0
+
+[node name="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3" type="Sprite2D" parent="."]
+position = Vector2(576, 327)
+scale = Vector2(0.9, 0.507813)
+texture = ExtResource("2_762b5")
+
+[node name="BACK BUTTON" type="Button" parent="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3"]
+offset_left = -641.111
+offset_top = -636.062
+offset_right = -530.111
+offset_bottom = -486.062
+theme_override_colors/font_hover_color = Color(0.682458, 0.547822, 0.130623, 1)
+theme_override_colors/font_color = Color(0.898039, 0.133333, 0, 1)
+theme_override_fonts/font = SubResource("SystemFont_tcjfe")
+theme_override_font_sizes/font_size = 90
+action_mode = 0
+text = "<"
+flat = true
+
+[node name="MOUNTAIN" type="Button" parent="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3"]
+offset_left = -567.778
+offset_top = -429.292
+offset_right = -178.778
+offset_bottom = -98.2923
+theme_override_colors/font_hover_color = Color(0.404641, 0.304837, 0.804663, 1)
+theme_override_fonts/font = SubResource("SystemFont_6hbaw")
+theme_override_font_sizes/font_size = 86
+flat = true
+
+[node name="SEA" type="Button" parent="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3"]
+offset_left = 212.0
+offset_top = -374.0
+offset_right = 530.0
+offset_bottom = -173.0
+theme_override_colors/font_hover_color = Color(0.404641, 0.304837, 0.804663, 1)
+theme_override_fonts/font = SubResource("SystemFont_6hbaw")
+theme_override_font_sizes/font_size = 86
+flat = true
+
+[node name="FOREST" type="Button" parent="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3"]
+offset_left = -127.778
+offset_top = -135.877
+offset_right = 203.222
+offset_bottom = 126.123
+theme_override_colors/font_hover_color = Color(0.404641, 0.304837, 0.804663, 1)
+theme_override_fonts/font = SubResource("SystemFont_6hbaw")
+theme_override_font_sizes/font_size = 86
+flat = true
+
+[node name="VILLAGE" type="Button" parent="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3"]
+offset_left = -581.111
+offset_top = 143.754
+offset_right = -250.111
+offset_bottom = 405.754
+theme_override_colors/font_hover_color = Color(0.404641, 0.304837, 0.804663, 1)
+theme_override_fonts/font = SubResource("SystemFont_6hbaw")
+theme_override_font_sizes/font_size = 86
+flat = true
+
+[node name="CITY" type="Button" parent="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3"]
+offset_left = 198.889
+offset_top = 283.569
+offset_right = 529.889
+offset_bottom = 545.569
+theme_override_colors/font_hover_color = Color(0.404641, 0.304837, 0.804663, 1)
+theme_override_fonts/font = SubResource("SystemFont_6hbaw")
+theme_override_font_sizes/font_size = 86
+flat = true
+
+[connection signal="pressed" from="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3/BACK BUTTON" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3/MOUNTAIN" to="." method="_on_mountain_pressed"]
+[connection signal="pressed" from="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3/SEA" to="." method="_on_sea_pressed"]
+[connection signal="pressed" from="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3/FOREST" to="." method="_on_forest_pressed"]
+[connection signal="pressed" from="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3/VILLAGE" to="." method="_on_village_pressed"]
+[connection signal="pressed" from="5a7943e7-36Ea-478f-bf4c-6Dfd004Fcdb3/CITY" to="." method="_on_city_pressed"]
